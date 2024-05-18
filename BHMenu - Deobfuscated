@@ -1,0 +1,641 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BunkerHillMenu = Instance.new("ScreenGui")
+local UI = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local Buttons = Instance.new("Frame")
+local ESP = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Clothes = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local _1000 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Barriers = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TPBA = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local TPCA = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local DisableDetain = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Hitbox = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Header = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local Bar = Instance.new("TextLabel")
+local credits = Instance.new("TextLabel")
+local Bar_2 = Instance.new("TextLabel")
+local descr = Instance.new("TextLabel")
+local version = Instance.new("TextLabel")
+local Toggle_On = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Toggle_Off = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+
+--Properties:
+
+BunkerHillMenu.Name = "BunkerHillMenu"
+BunkerHillMenu.Parent = game.Players_.LocalPlayer:WaitForChild("PlayerGui")
+BunkerHillMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+BunkerHillMenu.ResetOnSpawn = false
+
+UI.Name = "UI"
+UI.Parent = BunkerHillMenu
+UI.BackgroundColor3 = Color3.fromRGB(26, 0, 39)
+UI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UI.BorderSizePixel = 0
+UI.Position = UDim2.new(0.0199999996, 0, 0.26699999, 0)
+UI.Size = UDim2.new(0, 304, 0, 418)
+
+UICorner.CornerRadius = UDim.new(0, 30)
+UICorner.Parent = UI
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(42, 0, 63)), ColorSequenceKeypoint.new(0.12, Color3.fromRGB(82, 48, 99)), ColorSequenceKeypoint.new(0.15, Color3.fromRGB(89, 56, 105)), ColorSequenceKeypoint.new(0.17, Color3.fromRGB(75, 39, 92)), ColorSequenceKeypoint.new(0.18, Color3.fromRGB(97, 66, 112)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(127, 101, 139)), ColorSequenceKeypoint.new(0.51, Color3.fromRGB(224, 218, 227)), ColorSequenceKeypoint.new(0.88, Color3.fromRGB(227, 221, 230)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Rotation = -36
+UIGradient.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0.00, 0.00), NumberSequenceKeypoint.new(0.42, 0.00), NumberSequenceKeypoint.new(0.50, 0.03), NumberSequenceKeypoint.new(0.62, 0.00), NumberSequenceKeypoint.new(1.00, 0.00)}
+UIGradient.Parent = UI
+
+Buttons.Name = "Buttons"
+Buttons.Parent = UI
+Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buttons.BackgroundTransparency = 1.000
+Buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Buttons.BorderSizePixel = 0
+Buttons.Position = UDim2.new(0.0888157859, 0, 0.174641147, 0)
+Buttons.Size = UDim2.new(0, 250, 0, 329)
+
+ESP.Name = "ESP"
+ESP.Parent = Buttons
+ESP.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESP.BorderSizePixel = 0
+ESP.Position = UDim2.new(0.0689999983, 0, 0.0321975276, 0)
+ESP.Size = UDim2.new(0, 103, 0, 35)
+ESP.Font = Enum.Font.SourceSansBold
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextScaled = true
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = ESP
+
+Clothes.Name = "Clothes"
+Clothes.Parent = Buttons
+Clothes.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+Clothes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clothes.BorderSizePixel = 0
+Clothes.Position = UDim2.new(0.513000011, 0, 0.0321975276, 0)
+Clothes.Size = UDim2.new(0, 103, 0, 35)
+Clothes.Font = Enum.Font.SourceSansBold
+Clothes.Text = "NO CLOTHES"
+Clothes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clothes.TextScaled = true
+Clothes.TextSize = 14.000
+Clothes.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 10)
+UICorner_3.Parent = Clothes
+
+_1000.Name = "1000"
+_1000.Parent = Buttons
+_1000.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+_1000.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1000.BorderSizePixel = 0
+_1000.Position = UDim2.new(0.0689999983, 0, 0.17201516, 0)
+_1000.Size = UDim2.new(0, 103, 0, 35)
+_1000.Font = Enum.Font.SourceSansBold
+_1000.Text = "$1000"
+_1000.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1000.TextScaled = true
+_1000.TextSize = 14.000
+_1000.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 10)
+UICorner_4.Parent = _1000
+
+Barriers.Name = "Barriers"
+Barriers.Parent = Buttons
+Barriers.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+Barriers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Barriers.BorderSizePixel = 0
+Barriers.Position = UDim2.new(0.513000011, 0, 0.17201516, 0)
+Barriers.Size = UDim2.new(0, 103, 0, 35)
+Barriers.Font = Enum.Font.SourceSansBold
+Barriers.Text = "BARRIERS"
+Barriers.TextColor3 = Color3.fromRGB(255, 255, 255)
+Barriers.TextScaled = true
+Barriers.TextSize = 14.000
+Barriers.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0, 10)
+UICorner_5.Parent = Barriers
+
+TPBA.Name = "TPBA"
+TPBA.Parent = Buttons
+TPBA.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+TPBA.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TPBA.BorderSizePixel = 0
+TPBA.Position = UDim2.new(0.513000011, 0, 0.451650411, 0)
+TPBA.Size = UDim2.new(0, 103, 0, 35)
+TPBA.Font = Enum.Font.SourceSansBold
+TPBA.Text = "TP BA BASE"
+TPBA.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPBA.TextScaled = true
+TPBA.TextSize = 14.000
+TPBA.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 10)
+UICorner_6.Parent = TPBA
+
+TPCA.Name = "TPCA"
+TPCA.Parent = Buttons
+TPCA.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+TPCA.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TPCA.BorderSizePixel = 0
+TPCA.Position = UDim2.new(0.0689999983, 0, 0.451650411, 0)
+TPCA.Size = UDim2.new(0, 103, 0, 35)
+TPCA.Font = Enum.Font.SourceSansBold
+TPCA.Text = "TP CA BASE"
+TPCA.TextColor3 = Color3.fromRGB(255, 255, 255)
+TPCA.TextScaled = true
+TPCA.TextSize = 14.000
+TPCA.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 10)
+UICorner_7.Parent = TPCA
+
+DisableDetain.Name = "DisableDetain"
+DisableDetain.Parent = Buttons
+DisableDetain.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+DisableDetain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DisableDetain.BorderSizePixel = 0
+DisableDetain.Position = UDim2.new(0.0689999983, 0, 0.311832786, 0)
+DisableDetain.Size = UDim2.new(0, 103, 0, 35)
+DisableDetain.Font = Enum.Font.SourceSansBold
+DisableDetain.Text = "DETAIN"
+DisableDetain.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisableDetain.TextScaled = true
+DisableDetain.TextSize = 14.000
+DisableDetain.TextWrapped = true
+
+UICorner_8.CornerRadius = UDim.new(0, 10)
+UICorner_8.Parent = DisableDetain
+
+Hitbox.Name = "Hitbox"
+Hitbox.Parent = Buttons
+Hitbox.BackgroundColor3 = Color3.fromRGB(81, 0, 121)
+Hitbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hitbox.BorderSizePixel = 0
+Hitbox.Position = UDim2.new(0.513000011, 0, 0.311832786, 0)
+Hitbox.Size = UDim2.new(0, 103, 0, 35)
+Hitbox.Font = Enum.Font.SourceSansBold
+Hitbox.Text = "HITBOX"
+Hitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hitbox.TextScaled = true
+Hitbox.TextSize = 14.000
+Hitbox.TextWrapped = true
+
+UICorner_9.CornerRadius = UDim.new(0, 10)
+UICorner_9.Parent = Hitbox
+
+Header.Name = "Header"
+Header.Parent = UI
+Header.BackgroundColor3 = Color3.fromRGB(27, 0, 40)
+Header.BackgroundTransparency = 1.000
+Header.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Header.BorderSizePixel = 0
+Header.Position = UDim2.new(0.253289461, 0, 0.0143540669, 0)
+Header.Size = UDim2.new(0, 150, 0, 46)
+Header.Font = Enum.Font.GothamBold
+Header.Text = "Bunker Hill"
+Header.TextColor3 = Color3.fromRGB(255, 255, 255)
+Header.TextScaled = true
+Header.TextSize = 14.000
+Header.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 10)
+UICorner_10.Parent = Header
+
+Bar.Name = "Bar"
+Bar.Parent = UI
+Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar.BorderSizePixel = 0
+Bar.Position = UDim2.new(0.361842096, 0, 0.138755977, 0)
+Bar.Size = UDim2.new(0, 84, 0, 2)
+Bar.Font = Enum.Font.GothamBold
+Bar.Text = "Bunker Hill"
+Bar.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bar.TextScaled = true
+Bar.TextSize = 14.000
+Bar.TextWrapped = true
+
+credits.Name = "credits"
+credits.Parent = UI
+credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.BackgroundTransparency = 1.000
+credits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+credits.BorderSizePixel = 0
+credits.Position = UDim2.new(0.269736856, 0, 0.944976091, 0)
+credits.Size = UDim2.new(0, 140, 0, 17)
+credits.Font = Enum.Font.SourceSans
+credits.Text = "Credits: Melkros"
+credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+credits.TextScaled = true
+credits.TextSize = 14.000
+credits.TextWrapped = true
+
+Bar_2.Name = "Bar"
+Bar_2.Parent = UI
+Bar_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar_2.BackgroundTransparency = 1.000
+Bar_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar_2.BorderSizePixel = 0
+Bar_2.Position = UDim2.new(0.240131482, 0, 0.662679434, 0)
+Bar_2.Size = UDim2.new(0, 157, 0, 19)
+Bar_2.Font = Enum.Font.GothamBold
+Bar_2.Text = "--------------"
+Bar_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bar_2.TextScaled = true
+Bar_2.TextSize = 14.000
+Bar_2.TextWrapped = true
+
+descr.Name = "descr"
+descr.Parent = UI
+descr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+descr.BackgroundTransparency = 1.000
+descr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+descr.BorderSizePixel = 0
+descr.Position = UDim2.new(0.167763159, 0, 0.708133996, 0)
+descr.Size = UDim2.new(0, 200, 0, 87)
+descr.Font = Enum.Font.SourceSansBold
+descr.Text = "More features will be added, such as noclip crash server, insta-farm, instant reload, and anti-kick."
+descr.TextColor3 = Color3.fromRGB(255, 255, 255)
+descr.TextSize = 14.000
+descr.TextWrapped = true
+
+version.Name = "version"
+version.Parent = UI
+version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+version.BackgroundTransparency = 1.000
+version.BorderColor3 = Color3.fromRGB(0, 0, 0)
+version.BorderSizePixel = 0
+version.Position = UDim2.new(0.707236946, 0, 0.0143540669, 0)
+version.Size = UDim2.new(0, 110, 0, 11)
+version.Font = Enum.Font.SourceSans
+version.Text = "v1.0"
+version.TextColor3 = Color3.fromRGB(255, 255, 255)
+version.TextScaled = true
+version.TextSize = 14.000
+version.TextWrapped = true
+
+Toggle_On.Name = "Toggle_On"
+Toggle_On.Parent = BunkerHillMenu
+Toggle_On.BackgroundColor3 = Color3.fromRGB(26, 0, 39)
+Toggle_On.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_On.BorderSizePixel = 0
+Toggle_On.Position = UDim2.new(0, 399, 0, 6)
+Toggle_On.Size = UDim2.new(0, 37, 0, 37)
+Toggle_On.Font = Enum.Font.SourceSansBold
+Toggle_On.Text = "UI"
+Toggle_On.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle_On.TextScaled = true
+Toggle_On.TextSize = 14.000
+Toggle_On.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0, 30)
+UICorner_11.Parent = Toggle_On
+
+Toggle_Off.Name = "Toggle_Off"
+Toggle_Off.Parent = BunkerHillMenu
+Toggle_Off.BackgroundColor3 = Color3.fromRGB(26, 0, 39)
+Toggle_Off.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_Off.BorderSizePixel = 0
+Toggle_Off.Position = UDim2.new(0, 399, 0, 6)
+Toggle_Off.Size = UDim2.new(0, 37, 0, 37)
+Toggle_Off.Visible = false
+Toggle_Off.Font = Enum.Font.SourceSansBold
+Toggle_Off.Text = "UI"
+Toggle_Off.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle_Off.TextScaled = true
+Toggle_Off.TextSize = 14.000
+Toggle_Off.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0, 30)
+UICorner_12.Parent = Toggle_Off
+
+-- Scripts:
+
+local function DZTD_fake_script() -- ESP.LocalScript 
+	local script = Instance.new('LocalScript', ESP)
+
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		local runService = game:GetService("RunService")
+		local function esp(model)
+			for i, v in pairs(model:GetChildren()) do
+				if v:IsA("Humanoid") then
+					--Outline
+					local old_outline = v.Parent:FindFirstChildOfClass("Highlight")
+					if old_outline then -- Ensures to delete any old ESP's
+						old_outline:Destroy()
+					end
+					local outline = Instance.new("Highlight", v.Parent)
+					outline.Name = v.Parent.Name .. "_ESP"
+					outline.Parent = v.Parent
+				end
+			end
+		end
+	
+		for i, v in pairs(game.Workspace_:GetChildren()) do
+			if v:IsA("Model") then
+				esp(v)
+			end
+		end
+		warn("ESP: Activated")
+	end)
+	
+	
+	
+end
+coroutine.wrap(DZTD_fake_script)()
+local function CMTEFG_fake_script() -- Clothes.LocalScript 
+	local script = Instance.new('LocalScript', Clothes)
+
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		local function shirt_pants(model)
+			for i, v in pairs(model:GetChildren()) do
+				if v:IsA("Humanoid") then
+					local char = v.Parent
+					local shirt = char:WaitForChild("Clothing")
+					if shirt then
+						repeat
+							shirt:Destroy()
+						until wait(3)
+					end
+				end
+			end
+		end
+		for i, v in pairs(game.Workspace_:GetChildren()) do
+			if v:IsA("Model") then
+				shirt_pants(v)
+			end
+		end
+		warn("Clothing has been removed")
+	end)
+end
+coroutine.wrap(CMTEFG_fake_script)()
+local function UAKDRBY_fake_script() -- _1000.LocalScript 
+	local script = Instance.new('LocalScript', _1000)
+
+	local button = script.Parent
+	local function money()
+		local player = game.Players_.LocalPlayer
+		if player then
+			local value = player.Balance
+			value.Value = value.Value + 1000
+		else
+			warn("Player Not Found")
+		end
+	end
+	button.MouseButton1Click:Connect(function()
+		warn("$1000 Added")
+		money()
+	end)
+end
+coroutine.wrap(UAKDRBY_fake_script)()
+local function XUAMNME_fake_script() -- Barriers.LocalScript 
+	local script = Instance.new('LocalScript', Barriers)
+
+	local button = script.Parent
+	local function barriers()
+		local adonis = game.Workspace_["Adonis (Kill, warning)"]
+		
+		if adonis then
+			for i, v in pairs(adonis:GetChildren()) do
+				if v:IsA("Part") then
+					v:Destroy()
+				end
+				if v:IsA("UnionOperation") then
+					v:Destroy()
+				end
+			end
+		else
+			warn("Adonis folder could not be located")
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		barriers()
+		warn("Barriers Removed")
+	end)
+end
+coroutine.wrap(XUAMNME_fake_script)()
+local function ESAWAL_fake_script() -- TPBA.LocalScript 
+	local script = Instance.new('LocalScript', TPBA)
+
+	local button = script.Parent
+	local function teleport()
+		local playerChar = game.Players_.LocalPlayer
+		local shack = game.Workspace_.Buildings["BA structures"]["Small shack"]
+		for i, v in pairs(shack:GetChildren()) do
+			local char = playerChar.Character
+			if v.Name == "floor" then
+				char:PivotTo(v.CFrame)
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		teleport()
+		warn("Teleported to BA Base")
+	end)
+end
+coroutine.wrap(ESAWAL_fake_script)()
+local function JBCQ_fake_script() -- TPCA.LocalScript 
+	local script = Instance.new('LocalScript', TPCA)
+
+	local button = script.Parent
+	local function teleport()
+		local playerChar = game.Players_.LocalPlayer
+		local tent = game.Workspace_.BigTent
+		for i, v in pairs(tent:GetChildren()) do
+			local char = playerChar.Character
+			if v.Name == "Union" then
+				char:PivotTo(v.CFrame)
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		teleport()
+		warn("Teleported to CA Base")
+	end)
+end
+coroutine.wrap(JBCQ_fake_script)()
+local function NXUAO_fake_script() -- DisableDetain.LocalScript 
+	local script = Instance.new('LocalScript', DisableDetain)
+
+	local button = script.Parent
+	local function detain()
+		local playerChar = game.Players_.LocalPlayer
+		if playerChar then
+			local char = playerChar.Character
+			local script1 = char.DisableResetWhenDetained
+			local script2 = char.DisableWalkSpeedWhenArrested
+			script2:Destroy()
+			script1:Destroy()
+		else
+			warn("Player Char not found")
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		detain()
+		warn("Anti-Detain: Activated")
+	end)
+end
+coroutine.wrap(NXUAO_fake_script)()
+local function CSLF_fake_script() -- Hitbox.LocalScript 
+	local script = Instance.new('LocalScript', Hitbox)
+
+	local button = script.Parent
+	local runService = game:GetService("RunService")
+	button.MouseButton1Click:Connect(function()
+		-- Hitbox Extender (Not scripted by me)
+		-- Can be used Universally... with adjustments..
+		local function hitbox(model)
+			for i, v in pairs(model:GetChildren()) do
+				if v.Name == "HumanoidRootPart" then
+					local Char = v.Parent
+					for i,v in pairs(Char.Head:GetChildren()) do
+						if v.Name == "Hitbox" then
+							v:Destroy()
+						end
+					end
+					local Union = Instance.new("Part", Char:WaitForChild("Head"))
+					Union.Name = "Hitbox"
+					Union.Parent = Char:WaitForChild("Head")
+					if Union then
+						Union.Size = Vector3.new(8,8,8)
+						Union.Transparency = 0.9
+						Union.BrickColor = BrickColor.new("Really blue")
+						Union.Material = "Neon"
+						Union.CanCollide = false
+						Union.CFrame = Char.HumanoidRootPart.CFrame
+						local weld = Instance.new("WeldConstraint", Char:WaitForChild("Head"))
+						weld.Name = "HitboxWeld"
+						weld.Parent = Char:WaitForChild("Head")
+						weld.Part0 = Char:WaitForChild("Head")
+						weld.Part1 = Union
+					else
+						print(Char.Name .. " HumRoot Not found")
+					end
+				end
+			end
+		end
+		for i, v in pairs(game.Workspace_:GetChildren()) do
+			if v:IsA("Model") then
+				hitbox(v)
+			end
+		end
+		warn("Hitbox: Activated")
+		warn("Note: Change size in script")
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(CSLF_fake_script)()
+local function RYAH_fake_script() -- UI.Master 
+	local script = Instance.new('LocalScript', UI)
+
+	local frame = script.Parent
+	frame.Position = UDim2.new(-0.183, 0,0.269, 0)
+	frame.Visible = false
+	
+end
+coroutine.wrap(RYAH_fake_script)()
+local function VSZJ_fake_script() -- Toggle_On.LocalScript 
+	local script = Instance.new('LocalScript', Toggle_On)
+
+	local button = script.Parent
+	local frame = script.Parent.Parent:WaitForChild("UI")
+	local TweenService = game:GetService("TweenService")
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.Toggle_Off.Visible = true
+		frame.Visible = true
+		local Position = frame.Position
+	
+		-- How you want it to tween
+		local info = TweenInfo.new(
+			0.5, -- Time animating
+			Enum.EasingStyle.Linear, -- EasingStyle
+			Enum.EasingDirection.Out, -- EasingDirection
+			0, -- Repitions
+			false, -- Reverse post tween?
+			0 -- Delay time
+		)
+	
+		-- Where you want it to tween
+		local goal = {
+			Position = UDim2.new(0.02, 0,0.267, 0)
+		}
+	
+		local Tween = TweenService:Create(frame, info, goal)
+		Tween:Play()
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(VSZJ_fake_script)()
+local function RPCBSD_fake_script() -- Toggle_Off.LocalScript 
+	local script = Instance.new('LocalScript', Toggle_Off)
+
+	local button = script.Parent
+	local frame = script.Parent.Parent:WaitForChild("UI")
+	local TweenService = game:GetService("TweenService")
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.Toggle_On.Visible = true
+		local Position = frame.Position
+	
+		-- How you want it to tween
+		local info = TweenInfo.new(
+			0.5, -- Time animating
+			Enum.EasingStyle.Linear, -- EasingStyle
+			Enum.EasingDirection.Out, -- EasingDirection
+			0, -- Repitions
+			false, -- Reverse post tween?
+			0 -- Delay time
+		)
+	
+		-- Where you want it to tween
+		local goal = {
+			Position = UDim2.new(-0.183, 0,0.269, 0)
+		}
+	
+		local Tween = TweenService:Create(frame, info, goal)
+		Tween:Play()
+		wait(0.5)
+		frame.Visible = false
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(RPCBSD_fake_script)()
